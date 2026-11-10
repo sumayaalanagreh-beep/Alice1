@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>درس Alice – مدرسة الوكرة الإعدادية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--m:#8A1538;--ac:#8A1538;--bg:#faf6f4;--cd:#fff;--tx:#2a2024;--ln:#e5d6da;--sf:#f6e9ed;--ok:#1b7a43;--no:#c0392b;--gd:#c9a227;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ac:#f0a0b8;--bg:#181214;--cd:#241a1d;--tx:#f4eaec;--ln:#4b3a40;--sf:#33232a;--ok:#5fd38d;--no:#ff8a7a;color-scheme:dark}}
+:root[data-theme="dark"]{--ac:#f0a0b8;--bg:#181214;--cd:#241a1d;--tx:#f4eaec;--ln:#4b3a40;--sf:#33232a;--ok:#5fd38d;--no:#ff8a7a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.8 Cairo,Tahoma,sans-serif}
+.hd{background:var(--m);color:#fff;padding:14px 18px 10px;text-align:center}
+.hd b{font-size:22px;font-weight:900}.hd small{display:block;opacity:.85}
+.zz{height:12px;background:linear-gradient(135deg,#fff 25%,transparent 25%) 0 0/24px 24px,linear-gradient(225deg,#fff 25%,transparent 25%) 0 0/24px 24px,var(--m)}
+nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;padding:12px;max-width:900px;margin:auto}
+nav button{font:700 14px Cairo,Tahoma,sans-serif;border:2px solid var(--m);background:var(--cd);color:var(--ac);border-radius:20px;padding:4px 14px;cursor:pointer}
+nav button.on{background:var(--m);color:#fff}nav button.dn::after{content:" ✓"}
+main{max-width:900px;margin:auto;padding:0 16px 120px}
+h1{font-size:34px;font-weight:900;margin:.3em 0;color:var(--ac);line-height:1.4}h2{font-size:25px;color:var(--ac);margin:.4em 0}
+.cd{background:var(--cd);border:1px solid var(--ln);border-inline-start:6px solid var(--m);border-radius:10px;padding:14px 18px;margin:12px 0}
+.g{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.btn{font:700 16px Cairo,Tahoma,sans-serif;background:var(--m);color:#fff;border:0;border-radius:8px;padding:8px 22px;cursor:pointer}
+.btn.o{background:var(--cd);color:var(--ac);border:2px solid var(--m)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.tabs button{flex:1;min-width:110px;font:700 15px Cairo,Tahoma,sans-serif;padding:8px;border:2px solid var(--m);background:var(--cd);color:var(--ac);border-radius:8px;cursor:pointer}.tabs .on{background:var(--m);color:#fff}
+table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid var(--ln);padding:6px 10px;text-align:center}th{background:var(--m);color:#fff}
+.ol li{margin:4px 0}.note{background:var(--sf);border-radius:8px;padding:8px 14px;margin:10px 0}
+.opt{display:block;width:100%;text-align:right;font:400 16px Cairo,Tahoma,sans-serif;background:var(--cd);color:var(--tx);border:2px solid var(--ln);border-radius:8px;padding:6px 12px;margin:5px 0;cursor:pointer}
+.opt.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 18%,var(--cd))}.opt.no{border-color:var(--no);background:color-mix(in srgb,var(--no) 18%,var(--cd))}
+.win{direction:ltr;text-align:left;background:#1e5a9e;padding:6px;border-radius:6px;font:13px Arial,sans-serif;color:#000;max-width:540px;margin:8px auto}
+.win .mb{background:#e8e8e8;display:flex;gap:2px}.win .t{cursor:pointer}.mb .t{padding:3px 12px}.t:hover{outline:2px solid #f5b400}
+.menu{background:#f4f4f4;width:230px;border:1px solid #888}.menu .t,.tr .t{padding:4px 10px}.tr .t{display:block}
+.scr{background:#d8e8f8;min-height:90px;padding:8px}.tiles{display:flex;flex-wrap:wrap;gap:8px}.tile{width:92px;height:56px;border-radius:3px;color:#fff;display:flex;align-items:flex-end;justify-content:center;font-size:11px}
+.b{font:13px Arial;padding:4px 10px;margin:2px}.hint{font-weight:700;color:var(--ac);margin:6px 0}.bad{animation:sh .3s}@keyframes sh{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.stage{position:relative;height:190px;background:linear-gradient(#7fb2e8 55%,#3f8a3a 55%);border-radius:8px;overflow:hidden;direction:ltr}
+#car{position:absolute;left:20px;bottom:30px;font-size:44px;transition:transform .25s}.fin{position:absolute;right:10px;bottom:30px;font-size:40px}
+.ax{display:flex;gap:8px;align-items:center;margin:6px 0;flex-wrap:wrap}.ax button{font:700 15px Cairo,Tahoma,sans-serif;border:0;color:#fff;border-radius:6px;padding:4px 14px;cursor:pointer}
+.race{height:34px;overflow:hidden;white-space:nowrap}.race span{display:inline-block;font-size:28px;animation:rc 6s linear infinite}@keyframes rc{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.race span{animation:none}.bad{animation:none}}
+#tp{position:fixed;left:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));width:290px;max-height:88vh;overflow:auto;background:var(--cd);border:2px solid var(--m);border-radius:12px;z-index:20;box-shadow:0 4px 18px rgba(0,0,0,.25)}
+#tp .th{background:var(--m);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:6px 12px;font-weight:700}
+#tp .th button{background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+#tp .bd{padding:10px;text-align:center}#tp.min .bd{display:none}#tp.min{width:auto}
+.wr{position:relative;width:240px;height:250px;margin:auto}.wheel{width:240px;height:240px;margin-top:10px;transition:transform 4s cubic-bezier(.17,.67,.12,1)}
+.ptr{position:absolute;top:-2px;left:50%;margin-left:-11px;border:11px solid transparent;border-top:22px solid var(--gd);z-index:2}
+#rs{font-weight:900;font-size:20px;color:var(--ac);min-height:36px}textarea{width:100%;height:90px;font:14px Cairo,Tahoma,sans-serif;background:var(--bg);color:var(--tx);border:1px solid var(--ln);border-radius:6px}
+button:focus-visible{outline:3px solid var(--gd);outline-offset:2px}
+
+/* Classroom orchestration */
+#gate{position:fixed;inset:0;z-index:100;background:linear-gradient(135deg,#8a1538,#351322);display:flex;align-items:center;justify-content:center;padding:18px;overflow:auto}
+#gate .gate-card{background:#fff;color:#292027;border-radius:20px;padding:28px;width:min(530px,100%);box-shadow:0 20px 65px #0005;text-align:center}
+#gate input,#gate select{width:100%;padding:12px;border:1px solid #d9c8cf;border-radius:10px;margin:7px 0;font:16px Cairo,Tahoma}
+#gate .roles{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:16px 0}
+#gate .roles button{background:#f8edf1;border:2px solid #8a1538;border-radius:9px;color:#8a1538;padding:8px 14px;font:700 14px Cairo;cursor:pointer}
+#gate .roles button.active{background:#8a1538;color:white}
+#gate .err{color:#b42318;font-weight:700;min-height:26px}
+#classbar{display:none;position:sticky;top:0;z-index:15;background:#fff3f6;color:#5b1027;border-bottom:2px solid #8a1538;padding:7px 12px;text-align:center;font-weight:700}
+#teacher-dash{display:none;max-width:1150px;margin:12px auto;padding:12px}
+#teacher-dash .panel{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:14px;margin:12px 0}
+#teacher-dash .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+#teacher-dash .stat{background:var(--sf);padding:12px;border-radius:10px;text-align:center}
+#teacher-dash .stat strong{display:block;font-size:26px;color:var(--ac)}
+#teacher-dash .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#teacher-dash select{font:15px Cairo;padding:8px;max-width:100%;border-radius:8px;background:var(--cd);color:var(--tx)}
+#teacher-dash .tablewrap{overflow-x:auto}
+#teacher-dash td{white-space:nowrap}
+#teacher-dash .live{color:#168044}#teacher-dash .away{color:#8a737b}
+#student-points{display:none;position:fixed;right:12px;bottom:12px;z-index:21;background:#8a1538;color:white;border-radius:18px;padding:7px 14px;font-weight:900;box-shadow:0 3px 15px #0003}
+#student-lock{display:none;max-width:700px;margin:45px auto;background:var(--cd);border:2px dashed var(--m);border-radius:15px;text-align:center;padding:30px}
+#leaderboard{display:none;max-width:950px;margin:12px auto;padding:18px}
+#leaderboard .podium{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;text-align:center}
+#leaderboard .podium>div{background:var(--cd);border:2px solid #c9a227;border-radius:15px;padding:15px 8px;overflow-wrap:anywhere}
+#leaderboard .podium strong{display:block;color:var(--ac);font-size:22px}
+#teacher-dash .wheelbox{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center}
+#teacher-dash .wheelbox .wr{flex:none}
+#teacher-dash .wheelbox .wheel{transition:transform 4s cubic-bezier(.17,.67,.12,1)}
+#mode-banner{font-size:13px;opacity:.85}
+@media(max-width:650px){#leaderboard .podium{gap:5px}#leaderboard .podium>div{padding:8px 3px;font-size:12px}#teacher-dash .controls{flex-direction:column;align-items:stretch}}
+
+.teacher-sidebar{position:fixed;left:12px;top:90px;bottom:14px;width:350px;max-width:calc(100vw - 24px);overflow:auto;z-index:30;background:var(--cd);border:2px solid var(--m);border-radius:14px;box-shadow:0 6px 30px #0003;padding:10px!important;max-height:none}
+.teacher-sidebar h1{font-size:20px}.teacher-sidebar h2{font-size:17px}.teacher-sidebar .panel{padding:9px!important;margin:8px 0!important}.teacher-sidebar .stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}.teacher-sidebar .stat{font-size:11px;padding:5px!important}.teacher-sidebar .stat strong{font-size:19px}.teacher-sidebar .controls{display:flex;flex-direction:column;align-items:stretch}.teacher-sidebar .controls>*{width:100%}.teacher-sidebar .wheelbox{flex-direction:column;gap:4px}.teacher-sidebar .tablewrap{max-height:210px;overflow:auto}.teacher-sidebar.collapsed{width:190px;bottom:auto;max-height:70px;overflow:hidden}.teacher-sidebar.collapsed .sidebar-content{display:none}.teacher-sidebar .sidebar-head{display:flex;justify-content:space-between;align-items:center;gap:6px;position:sticky;top:-10px;background:var(--m);color:white;padding:8px;border-radius:8px;z-index:2}.teacher-sidebar .sidebar-head button{border:1px solid white;background:white;color:#8a1538;border-radius:6px;padding:4px 8px;cursor:pointer}.teacher-sidebar .sidebar-head b{font-size:14px}.teacher-sidebar .controls label{display:flex;flex-direction:column}.teacher-sidebar .controls select{width:100%}.teacher-sidebar .sidebar-nav{display:flex;gap:5px;margin:8px 0}.teacher-sidebar .sidebar-nav button{flex:1}.teacher-sidebar .sidebar-hint{font-size:12px}.teacher-sidebar .wr{transform:scale(.85);margin:-12px auto}.teacher-sidebar .wheelbox{margin-top:0}
+#leaderboard{position:fixed;inset:8% 6%;overflow:auto;z-index:60;background:var(--bg);border:3px solid var(--m);border-radius:14px;box-shadow:0 0 0 100vmax #0008}#leaderboard .board-close{position:sticky;top:0;float:left;z-index:3;background:var(--m);color:white;border:0;border-radius:8px;padding:8px 17px;cursor:pointer;font:700 17px Cairo,Tahoma}#wheel-overlay{position:fixed;inset:0;z-index:90;background:#0009;display:flex;align-items:center;justify-content:center;padding:20px}#wheel-overlay .winner-card{background:white;color:#8a1538;text-align:center;border:5px solid #c9a227;border-radius:24px;padding:35px;min-width:min(95vw,440px);box-shadow:0 18px 80px #0007;font:700 24px Cairo,Tahoma}#wheel-overlay strong{display:block;font-size:clamp(32px,5vw,60px);margin:18px 0;overflow-wrap:anywhere}#student-points{right:15px;left:auto!important}body.teacher-mode main{max-width:980px}body.teacher-mode #nv{max-width:980px}body.teacher-mode #leaderboard{position:fixed;inset:10% 8%;overflow:auto;z-index:40;background:var(--bg);border:3px solid var(--m);border-radius:14px;box-shadow:0 0 0 100vmax #0008}
+@media(max-width:650px){.teacher-sidebar{top:70px;width:310px}}
+</style></head><body>
+<div class="hd"><b>مدرسة الوكرة الإعدادية للبنات</b><small>دولة قطر · الصف الثامن · تقنية المعلومات</small></div><div class="zz"></div>
+<div id="classbar"></div><aside id="teacher-dash" class="teacher-sidebar"></aside><section id="leaderboard"></section><div id="student-lock"><h2>⏳ بانتظار المعلمة</h2><p>سيظهر النشاط عندما تفتحه المعلمة. يمكنكِ الاستعداد على جهازك.</p></div><nav id="nv"></nav><main id="app"></main><div id="student-points">⭐ 0 نقطة</div><div id="wheel-overlay" role="dialog" aria-modal="true" style="display:none"><div class="winner-card"><div style="font-size:55px">🎉</div><div>الطالبة المختارة</div><strong id="winner-name"></strong><button class="btn" id="winner-close">إغلاق</button></div></div>
+<div id="gate"><div class="gate-card"><h1>🏎️ سباق السيارات في Alice 2</h1><p>مدرسة الوكرة الإعدادية للبنات</p><p>اختاري طريقة الدخول إلى الحصة</p><div class="roles"><button data-role="student" class="active">👩‍🎓 طالبة</button><button data-role="teacher">👩‍🏫 معلمة</button></div><div id="gate-fields"></div><button id="enter" class="btn">الدخول إلى الحصة</button><p id="gate-error" class="err"></p><small id="mode-banner">يحتاج التزامن المباشر إلى الإنترنت وقاعدة بيانات Supabase مهيأة.</small></div></div>
+
+<aside id="tp" style="display:none"><div class="th"><span>🎡 لوحة المعلمة</span><button id="mn" aria-label="تصغير">−</button></div>
+<div class="bd"><div class="wr"><div class="ptr"></div><div class="wheel" id="wh"><canvas id="wc" width="240" height="240"></canvas></div></div>
+<button class="btn" id="sp">أدِيري العجلة</button><div id="rs"></div>
+<details><summary>تعديل أسماء الطالبات</summary><textarea id="nm" aria-label="أسماء الطالبات، اسم في كل سطر"></textarea><button class="btn o" id="sv">حفظ الأسماء</button></details></div></aside>
+
+<script>
+const $=s=>document.querySelector(s);
+/* ---------- العجلة ---------- */
+let names=null;try{names=JSON.parse(localStorage.getItem('nm')||'null')}catch(e){}
+if(!names||names.length<2)names=Array.from({length:8},(_,i)=>'طالبة '+(i+1));
+const cx=$('#wc').getContext('2d'),COL=['#8A1538','#c9a227','#5b0e26','#e8d5a3','#a8284d','#7d6b3a'];
+function draw(){const n=names.length,a=2*Math.PI/n,r=120;cx.clearRect(0,0,240,240);names.forEach((s,i)=>{cx.beginPath();cx.moveTo(r,r);cx.arc(r,r,r-2,-Math.PI/2+i*a,-Math.PI/2+(i+1)*a);cx.fillStyle=COL[i%6];cx.fill();cx.save();cx.translate(r,r);cx.rotate(-Math.PI/2+(i+.5)*a);cx.fillStyle=i%6==3?'#333':'#fff';cx.font='bold '+Math.max(9,Math.min(15,200/n+4))+'px Cairo,Tahoma,sans-serif';cx.textAlign='right';cx.fillText(s.slice(0,14),r-12,5);cx.restore()})}
+$('#nm').value=names.join('\n');draw();
+let rot=0,busy=0;
+$('#sp').onclick=()=>{if(busy)return;busy=1;$('#rs').textContent='';const n=names.length,k=Math.floor(Math.random()*n),c=(k+.5)*360/n;rot=rot-(rot%360)+1800+(360-c);$('#wh').style.transform=`rotate(${rot}deg)`;setTimeout(()=>{$('#rs').textContent='🎉 '+names[k];busy=0},4100)};
+$('#sv').onclick=()=>{const l=$('#nm').value.split('\n').map(x=>x.trim()).filter(Boolean);if(l.length<2)return;names=l;try{localStorage.setItem('nm',JSON.stringify(l))}catch(e){}draw()};
+$('#mn').onclick=()=>{const p=$('#tp');p.classList.toggle('min');$('#mn').textContent=p.classList.contains('min')?'🎡':'−'};
+if(innerWidth<900)$('#mn').click();
+
+/* ---------- بناء الواجهات الوهمية لبرنامج Alice ---------- */
+const MB=o=>`<div class="mb">`+['File','Edit','Tools','Help'].map(x=>`<span class="t"${x==o?' data-ok="1"':''}>${x}</span>`).join('')+`</div><div class="scr"></div>`;
+const ML=(a,o)=>`<div class="mb"><span>File</span></div><div class="menu">`+a.map(x=>`<div class="t"${x==o?' data-ok="1"':''}>${x}</div>`).join('')+`</div>`;
+const BT=(a,o)=>`<div class="scr">`+a.map(x=>`<button class="t b"${x==o?' data-ok="1"':''}>${x}</button>`).join('')+`</div>`;
+const IN=a=>`<div class="scr">File Name: <input data-ans="${a}"> <div style="direction:rtl">اكتبي ثم اضغطي Enter</div></div>`;
+const TT=`<div class="scr tiles">`+[['dirt','#7a5230'],['grass','#2e7d32'],['sand','#c9b27a'],['snow','#9fb4c8'],['space','#222'],['water','#1d4f91']].map(([n,c])=>`<div class="t tile"${n=='grass'?' data-ok="1"':''} style="background:${c}">${n}</div>`).join('')+`</div>`;
+const TR=o=>`<div class="scr tr">`+['world','camera','light','ground','road','convertibleCorvette','car','car2','car3','Slice2'].map(x=>`<span class="t"${x==o?' data-ok="1"':''}>${x}</span>`).join('')+`</div>`;
+const RN=['methods','rename','Camera get a good look at this','capture pose','delete','save object...'];
+function run(box,st){let i=0;(function d(){if(i>=st.length){window.classroomSimDone?.();box.innerHTML=`<div class="cd"><b>🎉 أحسنتِ! أنهيتِ المحاكاة بنجاح.</b></div><button class="btn o" id="rr">إعادة المحاكاة</button>`;$('#rr').onclick=()=>{i=0;d()};return}
+const s=st[i];box.innerHTML=`<div class="hint">الخطوة ${i+1} من ${st.length}: ${s[0]}</div><div class="win">${s[1]}</div>`;
+const bad=e=>{e.classList.add('bad');setTimeout(()=>e.classList.remove('bad'),400)};
+box.querySelectorAll('.t').forEach(e=>e.onclick=()=>e.dataset.ok?(i++,d()):bad(e));
+const inp=box.querySelector('input');if(inp){inp.focus();inp.onkeydown=e=>{if(e.key==='Enter')inp.dataset.ans.split('|').includes(inp.value.trim())?(i++,d()):bad(inp)}}})()}
+function axes(box){let x=0,y=0,z=0;box.innerHTML=`<div class="stage"><div id="car">🚗</div><div class="fin">🏁</div></div>
+<div class="ax"><button style="background:#d32f2f" data-a="x-">◀ x</button><button style="background:#d32f2f" data-a="x+">x ▶</button><span>المحور الأحمر x: الجانب الأيمن للكائن</span></div>
+<div class="ax"><button style="background:#2e7d32" data-a="y-">▼ y</button><button style="background:#2e7d32" data-a="y+">y ▲</button><span>المحور الأخضر y: الاتجاه العلوي</span></div>
+<div class="ax"><button style="background:#1565c0" data-a="z-">z −</button><button style="background:#1565c0" data-a="z+">z +</button><span>المحور الأزرق z: مقدمة الكائن</span></div>
+<div class="note" id="ms">التحدي: حرّكي السيارة على المحور x حتى تصل إلى خط النهاية.</div>`;
+box.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{const[a,s]=b.dataset.a,v=s=='+'?1:-1;if(a=='x')x=Math.max(0,Math.min(6,x+v));if(a=='y')y=Math.max(0,Math.min(3,y+v));if(a=='z')z=Math.max(-2,Math.min(3,z+v));
+$('#car').style.transform=`translate(${x*55}px,${-y*30-z*8}px) scale(${1+z*.12})`;if(x==6)window.classroomSimDone?.();$('#ms').textContent=x==6?'🏁 وصلت السيارة إلى خط النهاية! لاحظي أن تغيير x حرّكها يميناً فقط.':`الموضع: x=${x} ، y=${y} ، z=${z}`})}
+
+/* ---------- محتوى الأهداف ---------- */
+const G=[
+{t:'إنشاء عالم افتراضي جديد وحفظه',bk:'ص130 و ص136',
+L:`<div class="cd"><b>العالم (World)</b> في برنامج Alice هو البيئة الافتراضية التي تُدرج فيها الكائنات الممثلة للشخصيات والأماكن والأحداث، وجميع المؤثرات الأخرى كالأصوات والنصوص التي تُكوّن اللعبة. وتوجد هذه العناصر في مكتبات خاصة داخل البرنامج. في لعبتنا سنختار قالب العشب <b>Grass</b>.</div>
+<h2>لإنشاء عالم افتراضي جديد</h2><ol class="ol"><li>اضغطي <b>File</b> (ملف) واختاري <b>New World</b> (عالم جديد).</li><li>من تبويب <b>Templates</b> (القوالب) اختاري قالب <b>grass</b> (العشب).</li><li>اضغطي <b>Open</b> (فتح).</li><li>أصبح عالمنا جاهزاً لإضافة الكائنات.</li></ol>
+<h2>لحفظ العالم الافتراضي</h2><ol class="ol"><li>اضغطي <b>File</b> ثم اختاري <b>Save World</b> (حفظ العالم).</li><li>اكتبي اسماً لعالم اللعبة.</li><li>اضغطي <b>Save</b> (حفظ).</li></ol><div class="note">💡 يذكّرنا Alice بحفظ العالم كل <b>15 دقيقة</b>، ويجب أن نحفظ عملنا باستمرار.</div>`,
+S:['sim',[['اضغطي على قائمة File',MB('File')],['اختاري New World',ML(['New World','Open World...','Save World','Export Video...'],'New World')],['من تبويب Templates اختاري قالب grass',TT],['اضغطي Open',BT(['Cancel','Open'],'Open')],['الآن لنحفظ العالم: اضغطي File',MB('File')],['اختاري Save World',ML(['New World','Open World...','Save World','Save World As...'],'Save World')],['اكتبي اسم اللعبة: Car game',IN('Car game')],['اضغطي Save',BT(['Cancel','Save'],'Save')]]],
+Q:[['ما العالم (World) في برنامج Alice؟',['البيئة الافتراضية التي تُدرج فيها الكائنات والأصوات والنصوص','ملف لحفظ الأكواد فقط','لوحة لاختيار الألوان','زر تشغيل اللعبة'],0],['أي قالب نختاره لعالم لعبة سباق السيارات؟',['sand (الرمل)','grass (العشب)','water (الماء)','space (الفضاء)'],1]],
+P:['افتحي برنامج Alice ثم اضغطي File ← New World.','من تبويب Templates اختاري قالب grass ثم اضغطي Open.','احفظي العالم: File ← Save World باسم Car game ثم Save.']},
+
+{t:'التعرف على مفهوم الكائن وإضافة كائنات اللعبة',bk:'ص131',
+L:`<div class="cd">يطلق مصطلح <b>الكائن (Object)</b> على كل ما هو موجود في عالم Alice ويمكن تمييزه وتحديده، ويُمثّل مكونات اللعبة من شخصيات وأماكن. لكل كائن:<ul><li><b>اسم Name</b> يميّزه.</li><li><b>خصائص Properties</b> مثل: العرض، الطول، اللون.</li><li><b>دوال Methods</b> وسلوكيات مثل: التحرك، الدوران، التحدث.</li></ul>وقد توجد كائنات مركّبة من أجزاء، فكائن «السيارة» يتكوّن من 4 عجلات تُبرمج كل منها بشكل منفصل.</div>
+<p>يقدّم Alice مجموعة كبيرة من الكائنات المنظمة في مكتبة <b>Gallery of Objects</b>. وهذه كائنات لعبة «سباق السيارات»:</p><table><tr><th>الشخصية</th><th>العدد</th><th>المكتبة</th><th>اسم الكائن في Alice</th></tr><tr><td>سيارة اللاعب</td><td>1</td><td>Vehicles (المركبات)</td><td>ConvertibleCorvette</td></tr><tr><td>الطريق</td><td>3</td><td>Roads and signs (الطرق والإشارات)</td><td>Road</td></tr><tr><td>سيارة</td><td>3</td><td>Vehicles</td><td>Car</td></tr><tr><td>خط النهاية</td><td>1</td><td>Shapes (الأشكال)</td><td>Slice2</td></tr></table>`,
+S:['sim',[['من أي مكتبة نضيف «سيارة اللاعب» ConvertibleCorvette؟',BT(['Vehicles','Roads and signs','Shapes'],'Vehicles')],['من أي مكتبة نضيف «الطريق» Road؟',BT(['Vehicles','Roads and signs','Shapes'],'Roads and signs')],['من أي مكتبة نضيف «السيارة» Car؟',BT(['Vehicles','Roads and signs','Shapes'],'Vehicles')],['من أي مكتبة نضيف «خط النهاية» Slice2؟',BT(['Vehicles','Roads and signs','Shapes'],'Shapes')]]],
+Q:[['ما الاسم الذي يطلق على كل ما يمكن تمييزه وتحديده في عالم Alice؟',['الدالة','الكائن','المكتبة','القالب'],1],['أي مما يلي يُعد من «الدوال Methods» وليس من الخصائص؟',['اللون','الطول','الدوران','العرض'],2]],
+P:['من Gallery of Objects أضيفي ConvertibleCorvette من مكتبة Vehicles (عدد 1).','أضيفي Road ثلاث مرات من Roads and signs، وCar ثلاث مرات من Vehicles.','أضيفي Slice2 من مكتبة Shapes ليكون خط النهاية.']},
+
+{t:'التعرف على أبعاد الكائن والتحكم فيه',bk:'ص138 و ص141',
+L:`<div class="cd">لكل كائن في Alice <b>أبعاد افتراضية</b> يمكن تغييرها، وله <b>مركز</b> يحدد موقعه بالنسبة للعالم، ويختلف مركز كل كائن عن الآخر.</div>
+<table><tr><th>المحور</th><th>ما يدل عليه</th></tr><tr><td style="color:#d32f2f"><b>x (أحمر)</b></td><td>اتجاه الجانب الأيمن للكائن</td></tr><tr><td style="color:#2e7d32"><b>y (أخضر)</b></td><td>الاتجاه العلوي من الكائن</td></tr><tr><td style="color:#1565c0"><b>z (أزرق)</b></td><td>اتجاه مقدمة الكائن</td></tr></table>
+<h2>التحكم في الكائنات</h2><p>نستخدم الفأرة لوضع الكائنات في مكانها الصحيح وتحريكها، وتساعدنا <b>أزرار التحكم (control buttons)</b> في طريقة العرض الأحادية (single view):</p><table><tr><td>تحريك بحرية في جميع الاتجاهات</td><td>تحريك لأعلى / لأسفل</td></tr><tr><td>استدارة لليمين / لليسار</td><td>استدارة للأمام / للخلف</td></tr><tr><td>تدوير في جميع الاتجاهات</td><td>تغيير حجم الكائن</td></tr><tr><td colspan="2">نسخ الكائن</td></tr></table><div class="note">⚠️ يمكنك التحكم في <b>كائن واحد فقط</b> في كل مرة.</div>`,
+S:['axes'],
+Q:[['المحور الأحمر x يدل على:',['الاتجاه العلوي','الجانب الأيمن للكائن','مقدمة الكائن','مركز الكائن'],1],['المحور الأزرق z يدل على:',['مقدمة الكائن','الاتجاه العلوي','الجانب الأيمن','اسم الكائن'],0]],
+P:['اضغطي على سيارة اللاعب ولاحظي محاورها x و y و z ومركزها.','استخدمي أزرار التحكم (single view) لوضع السيارة على الطريق في مكانها الصحيح.','ضعي خط النهاية في آخر الطريق، ولاحظي لوحة تفاصيل الكائن (properties).']},
+
+{t:'تسمية الكائنات',bk:'ص145',
+L:`<div class="cd">لجعل عملية البرمجة أسهل يجب <b>تسمية الكائنات بشكل مناسب</b>، فنرجع إليها بسهولة عند الحاجة. سنعيد تسمية سيارة اللاعب لتصبح <b>myCar</b>.</div>
+<h2>لإعادة تسمية كائن</h2><ol class="ol"><li>اضغطي بالزر الأيمن على كائن السيارة <b>convertibleCorvette</b>.</li><li>اختاري <b>rename</b> (إعادة تسمية).</li><li>اكتبي الاسم الجديد ثم اضغطي <b>Enter</b>.</li></ol><div class="note">🗑️ اضغطي <b>delete</b> إذا أردتِ حذف الكائن.</div>
+<table><tr><th>الاسم القديم</th><th>الاسم الجديد</th></tr><tr><td>convertibleCorvette</td><td>myCar</td></tr><tr><td>Slice2</td><td>finishLine</td></tr></table>`,
+S:['sim',[['اضغطي بالزر الأيمن على convertibleCorvette',TR('convertibleCorvette')],['اختاري rename',ML(RN,'rename')],['اكتبي الاسم الجديد: myCar',IN('myCar')],['الآن كائن خط النهاية: اضغطي على Slice2',TR('Slice2')],['اختاري rename',ML(RN,'rename')],['اكتبي الاسم الجديد: finishLine',IN('finishLine|finshLine')]]],
+Q:[['لماذا نعيد تسمية الكائنات؟',['لتغيير لونها','لنرجع إليها بسهولة عند البرمجة','لحذفها','لتكبير حجمها'],1],['ماذا نختار بعد الضغط بالزر الأيمن على الكائن لتغيير اسمه؟',['delete','rename','methods','capture pose'],1]],
+P:['اضغطي بالزر الأيمن على convertibleCorvette ← rename ← اكتبي myCar ← Enter.','أعيدي تسمية Slice2 إلى finishLine بالطريقة نفسها.','احفظي عالمك: File ← Save World (أو Ctrl+S).']}
+];
+
+/* ---------- الصفحات ---------- */
+let pg='intro',tab=0,done=[0,0,0,0];
+let studentLocalTabs={};
+const $a=$('#app');
+function nav(){const l=[['intro','التهيئة'],['obj','الأهداف'],[0,'الهدف 1'],[1,'الهدف 2'],[2,'الهدف 3'],[3,'الهدف 4'],['end','الغلق']];
+$('#nv').innerHTML=l.map(([k,n])=>`<button class="${k===pg?'on ':''}${typeof k=='number'&&done[k]?'dn':''}" data-k="${k}">${n}</button>`).join('');
+$('#nv').querySelectorAll('button').forEach(b=>{b.disabled=window.classroomRole==='student';b.onclick=()=>go(isNaN(b.dataset.k)?b.dataset.k:+b.dataset.k)})}
+function go(p){if(window.classroomRole==='student')return;if(window.classroomRole==='teacher'){window.classroomTeacherNavigate?.(p,0);return}pg=p;tab=0;render();scrollTo(0,0)}
+function render(){nav();if(pg=='intro')return intro();if(pg=='obj')return obj();if(pg=='end')return end();goal(pg)}
+function intro(){$a.innerHTML=`<h1>تصميم لعبة سباق السيارات في Alice</h1><div class="race" aria-hidden="true"><span>🏎️ 🚗 🚕</span></div>
+<div class="cd"><b>التهيئة:</b> سنصمم معاً لعبة «سباق السيارات». قبل أن نبدأ، فكّري ثم اضغطي على البطاقة لتري الإجابة.</div>
+<div class="g" id="pr"></div><p style="text-align:center"><button class="btn" id="nx">عرض أهداف الدرس</button></p>`;
+const q=[['ماذا نحتاج ليظهر سباق على الشاشة؟','عالم افتراضي (أرض عشبية) نضع فيه عناصر اللعبة'],['ما عناصر لعبتنا؟','سيارة اللاعب، 3 سيارات منافسة، 3 قطع طريق، وخط نهاية'],['كيف نعرف كل سيارة عند البرمجة؟','نعطي كل كائن اسماً واضحاً، فنرجع إليه بسهولة']];
+$('#pr').innerHTML=q.map(([a,b])=>`<button class="opt" style="text-align:center;min-height:90px"><b>${a}</b><br><span hidden>${b}</span></button>`).join('');
+$('#pr').querySelectorAll('button').forEach(b=>b.onclick=()=>{b.querySelector('span').hidden=false;b.classList.add('ok')});$('#nx').disabled=window.classroomRole==='student';$('#nx').onclick=()=>go('obj')}
+function obj(){$a.innerHTML=`<h1>أهداف الدرس</h1><p>في نهاية الدرس ستكونين قادرة على أن:</p><div class="g">`+G.map((g,i)=>`<button class="opt" data-i="${i}" style="text-align:center"><b style="font-size:30px;color:var(--ac)">${i+1}</b><br>${g.t}<br><small>الكتاب: ${g.bk}</small></button>`).join('')+`</div><p style="text-align:center"><button class="btn" data-i="0">ابدئي بالهدف الأول</button></p>`;
+$a.querySelectorAll('[data-i]').forEach(b=>{b.disabled=window.classroomRole==='student';b.onclick=()=>go(+b.dataset.i)})}
+function goal(i){const g=G[i],T=['الشرح','المحاكاة','الأسئلة','التطبيق العملي'];
+$a.innerHTML=`<h1>الهدف ${i+1}: ${g.t}</h1><div class="tabs">`+T.map((n,k)=>`<button class="${k==tab?'on':''}" data-t="${k}">${['📖','🎮','❓','💻'][k]} ${n}</button>`).join('')+`</div><div id="ct"></div><p style="text-align:center"><button class="btn" id="fw">${tab<3?'التالي':'إغلاق الهدف ✓'}</button></p>`;
+$a.querySelectorAll('[data-t]').forEach(b=>{b.disabled=false;b.onclick=()=>{if(window.classroomRole==='teacher'){window.classroomTeacherNavigate?.(i,+b.dataset.t)}else{tab=+b.dataset.t;if(window.classroomRole==='student')studentLocalTabs[i]=tab;goal(i)}}});
+$('#fw').disabled=window.classroomRole==='student'&&window.classroomGoalCompleted?.(i)&&tab===3;if($('#fw').disabled)$('#fw').textContent='✓ تم تسجيل إنجاز الهدف';$('#fw').onclick=()=>{if(window.classroomRole==='student'){if(tab<3){tab++;studentLocalTabs[i]=tab;goal(i);scrollTo(0,0)}else{window.classroomFinishGoal?.(i)}return}if(window.classroomRole==='teacher'){window.classroomTeacherNavigate?.(tab<3?i:(i<3?i+1:'end'),tab<3?tab+1:0);return}if(tab<3){tab++;goal(i);scrollTo(0,0)}else{done[i]=1;go(i<3?i+1:'end')}};
+const c=$('#ct');if(tab==0)c.innerHTML=g.L;
+if(tab==1){c.innerHTML=`<div class="cd">جرّبي الخطوات بنفسك قبل التطبيق على البرنامج.</div><div id="sm"></div>`;g.S[0]=='axes'?axes($('#sm')):run($('#sm'),g.S[1])}
+if(tab==2){let ok=0,an=0;c.innerHTML=g.Q.map((q,n)=>`<div class="cd"><b>${n+1}. ${q[0]}</b>`+q[1].map((o,k)=>`<button class="opt" data-q="${n}" data-o="${k}">${o}</button>`).join('')+`<div id="fb${n}"></div></div>`).join('')+`<div id="sc" class="note" hidden></div>`;
+c.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const n=+b.dataset.q,k=+b.dataset.o,q=g.Q[n];if($('#fb'+n).textContent)return;const r=k==q[2];b.classList.add(r?'ok':'no');if(!r)c.querySelector(`[data-q="${n}"][data-o="${q[2]}"]`).classList.add('ok');$('#fb'+n).textContent=r?'✅ إجابة صحيحة!':'❌ الإجابة الصحيحة موضّحة باللون الأخضر.';ok+=r;an++;window.classroomAnswer?.(i,n,k);if(an==g.Q.length){$('#sc').hidden=false;$('#sc').textContent=`نتيجتك: ${ok} من ${an}`}})}
+if(tab==3)c.innerHTML=`<div class="cd"><b>التطبيق العملي على برنامج Alice</b><br>نفّذي المهام التالية على جهازك ثم ضعي علامة ✓ عند إنجاز كل مهمة:</div>`+g.P.map(p=>`<label class="cd" style="display:block"><input type="checkbox"> ${p}</label>`).join('')+`<div class="note">عند إنجاز المهام اضغطي «إغلاق الهدف» لإنهاء هذا الهدف.</div>`}
+const END_Q=[['ما القالب الذي استخدمناه لإنشاء عالم سباق السيارات؟',['grass','water','space'],0],['ما الاسم الذي أطلقناه على سيارة اللاعب بعد إعادة تسميتها؟',['Slice2','myCar','Road'],1],['أي محور يدل على مقدمة الكائن في Alice؟',['x','y','z'],2]];
+function end(){
+$a.innerHTML=`<h1>🏁 غلق الدرس – تحدي خط النهاية</h1><div class="cd">أجيبي عن الأسئلة الثلاثة التالية. تُحتسب درجات الغلق من المحاولة الأولى فقط، ومجموعها 8 نقاط ضمن الدرجة النهائية من 20.</div><div id="end-questions"></div><div id="end-result" class="note" aria-live="polite"></div><div class="cd"><b>ملخص درسنا:</b> أنشأنا عالم grass وأضفنا كائنات السباق وأعدنا تسمية سيارة اللاعب إلى myCar وخط النهاية إلى finishLine.</div>`;
+const area=$('#end-questions');area.innerHTML=END_Q.map((q,n)=>`<div class="cd"><b>${n+1}. ${q[0]}</b><small style="display:block">${[2,3,3][n]} نقاط</small>${q[1].map((o,k)=>`<button class="opt" data-end-q="${n}" data-end-choice="${k}">${o}</button>`).join('')}<p id="end-feedback-${n}"></p></div>`).join('');
+const answers=window.classroomClosureAnswers||{};
+function mark(n,k){const q=END_Q[n];area.querySelectorAll(`[data-end-q="${n}"]`).forEach(b=>{b.disabled=true;if(+b.dataset.endChoice===q[2])b.classList.add('ok');else if(+b.dataset.endChoice===k)b.classList.add('no')});$('#end-feedback-'+n).textContent=k===q[2]?'✅ إجابة صحيحة!':'❌ الإجابة الصحيحة موضّحة بالأخضر.';}
+Object.entries(answers).forEach(([n,k])=>mark(+n,+k));
+area.querySelectorAll('[data-end-q]').forEach(b=>b.onclick=async()=>{const n=+b.dataset.endQ,k=+b.dataset.endChoice;if(Object.prototype.hasOwnProperty.call(window.classroomClosureAnswers||{},n))return;
+if(window.classroomRole==='student'){try{await window.classroomClosureAnswer(n,k)}catch(e){alert('تعذّر حفظ الإجابة: '+e.message);return}}
+else if(window.classroomRole==='teacher'){};
+window.classroomClosureAnswers=window.classroomClosureAnswers||{};window.classroomClosureAnswers[n]=k;mark(n,k);const count=Object.keys(window.classroomClosureAnswers).length;if(count===3)$('#end-result').textContent='🎉 أكملتِ أسئلة الغلق الثلاثة!';});
+if(Object.keys(answers).length===3)$('#end-result').textContent='🎉 تم إنجاز أسئلة الغلق الثلاثة.';
+}
+
+render();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+/* Alice classroom: change only these two values if you use a different project. */
+const SUPABASE_URL='https://jxfkzqyxpbfdctolvjnd.supabase.co';
+const SUPABASE_ANON_KEY='sb_publishable_QBiRXI-3kHLZRDOwutqeAg_j3GEUtUc';
+(function(){
+'use strict';
+window.classroomClosureAnswers={};window.classroomGoalCompleted=(g)=>goalCompleted.has(g);let studentRenderedPage=null,studentRenderError='',lastPageKey='',sidebarCollapsed=false;let wheelBusy=false,wheelEnd=0,displayModeSeen='',goalCompleted=new Set(),studentGoalPage='';let client=null,role='student',token='',studentId='',studentName='',state=null,students=[],points=0,teacherView='control',busy=false,spin=0,selected='';
+const el=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pages=[['intro','التهيئة'],['obj','الأهداف'],['0','الهدف 1'],['1','الهدف 2'],['2','الهدف 3'],['3','الهدف 4'],['end','الغلق']];
+const activities=['الشرح','المحاكاة','الأسئلة','التطبيق العملي'];
+try{if(SUPABASE_URL.includes('PASTE_')||SUPABASE_ANON_KEY.includes('PASTE_'))throw Error('لم يتم إعداد مشروع Supabase الجديد بعد');client=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:false}})}catch(e){el('mode-banner').textContent='⚠️ '+e.message}
+const roleButtons=[...document.querySelectorAll('[data-role]')];
+roleButtons.forEach(b=>b.onclick=()=>{role=b.dataset.role;roleButtons.forEach(x=>x.classList.toggle('active',x===b));fields()});
+function fields(){el('gate-error').textContent='';el('gate-fields').innerHTML=role==='student'?'<input id="person-name" placeholder="الاسم الثلاثي للطالبة" maxlength="90" autocomplete="name"><input id="person-class" placeholder="الصف والشعبة، مثل 8/1" maxlength="25">':'<input id="pin" type="password" placeholder="رمز المعلمة السري" autocomplete="off">'}
+fields();
+async function rpc(fn,args){if(!client)throw Error('تعذّر الاتصال بـ Supabase');const {data,error}=await client.rpc(fn,args);if(error)throw Error(error.message);return data}
+async function load(){const [a,b]=await Promise.all([client.from('alice_control').select('*').eq('id',1).single(),client.from('alice_students').select('id,name,class_name,score,last_seen,completed,joined_at').order('score',{ascending:false}).order('joined_at',{ascending:true})]);if(a.error)throw a.error;if(b.error)throw b.error;state=a.data;students=b.data||[];if(el('leaderboard').style.display==='block')renderBoard()}
+function showError(e){el('gate-error').textContent='⚠️ '+(e.message||String(e))}
+el('enter').onclick=async()=>{if(busy)return;busy=true;el('enter').disabled=true;try{
+if(role==='student'){studentName=el('person-name').value.trim();const c=el('person-class').value.trim();if(studentName.length<3||!c)throw Error('أدخلي اسمكِ الثلاثي وصفكِ وشعبتكِ');const result=await rpc('alice_join',{p_name:studentName,p_class:c});token=result.token;studentId=result.id;}
+else if(role==='teacher'){const pin=el('pin').value;if(!pin)throw Error('أدخلي رمز المعلمة');token=await rpc('alice_teacher_login',{p_pin:pin});}
+await load();window.classroomRole=role;el('gate').style.display='none';el('classbar').style.display='block';el('tp').style.display='none';
+if(role==='teacher'){document.body.classList.add('teacher-mode');el('teacher-dash').style.display='block';el('nv').style.display='flex';el('app').style.display='block';setPage(state.page,state.activity);lastPageKey=String(state.page)+'/'+state.activity;renderTeacher();}else{el('student-points').style.display='block';studentRenderedPage=null;renderStudent();syncDisplay();}
+setInterval(refresh,2500);if(role==='student')setInterval(()=>rpc('alice_heartbeat',{p_token:token}).catch(()=>{}),15000);
+}catch(e){showError(e)}finally{busy=false;el('enter').disabled=false}};
+async function refresh(){try{await load();if(role==='teacher'){const key=String(state.page)+'/'+state.activity;if(key!==lastPageKey || !el('app').innerHTML.trim()){lastPageKey=key;setPage(state.page,state.activity)}if(!wheelBusy)renderTeacher();syncDisplay()}else if(role==='student'){renderStudent();syncDisplay()}}catch(e){console.error('Alice sync:',e);el('classbar').textContent='⚠️ تعذّر تحديث الحصة: '+(e.message||String(e));}}
+function setPage(p,t){const k=String(p??'intro');if(!pages.some(x=>x[0]===k))return;pg=/^[0-3]$/.test(k)?Number(k):k;tab=Math.max(0,Math.min(3,Number(t)||0));render()}
+function renderStudent(){
+ const me=students.find(x=>String(x.id)===String(studentId));points=me?.score||0;
+ el('student-points').textContent=`⭐ ${points} / 20 نقطة`;
+ const isOpen=state?.is_open===true || state?.is_open==='true' || state?.is_open===1;
+ const p=String(state?.page??'intro').trim();
+ const pageLabel=pages.find(x=>x[0]===p)?.[1]||'التهيئة';
+ el('classbar').textContent=`👩‍🎓 ${studentName} | ${isOpen?'النشاط الحالي: '+pageLabel:'بانتظار بدء المعلمة'}`;
+ el('student-lock').style.display=isOpen?'none':'block';
+ el('nv').style.display=isOpen?'flex':'none';el('app').style.display=isOpen?'block':'none';
+ if(!isOpen){syncDisplay();return;}
+ // Always re-render when the teacher changes the page, including when the initial
+ // local page happens to have the same key as the classroom page.
+ const needsRender=studentRenderedPage!==p || String(pg)!==p || !el('app').textContent.trim();
+ if(needsRender){
+  try{
+   const localTab=/^[0-3]$/.test(p)?(studentLocalTabs[p]??0):0;
+   setPage(p,localTab);
+   if(!el('app').textContent.trim())throw Error('لم يتم إنشاء محتوى الصفحة');
+   studentRenderedPage=p;studentRenderError='';
+  }catch(err){
+   studentRenderError=err.message||String(err);
+   el('app').innerHTML='<div class="cd"><h2>تعذّر عرض الدرس</h2><p>يرجى إرسال هذه الرسالة للمعلمة: '+esc(studentRenderError)+'</p></div>';
+   console.error('Alice student render:',err);
+  }
+ }
+ el('nv').querySelectorAll('button').forEach(b=>b.disabled=true);
+ document.querySelectorAll('#app #nx,#app [data-i],#app #rs2').forEach(b=>b.disabled=true);
+}
+
+function live(s){return Date.now()-new Date(s.last_seen).getTime()<45000}
+function renderTeacher(){const p=String(state?.page||'intro'),t=Number(state?.activity||0),present=students.filter(live).length;
+el('classbar').textContent=`👩‍🏫 لوحة المعلمة | ${state?.is_open?'الحصة مفتوحة':'الحصة متوقفة'} | الطالبات المتصلات: ${present}`;
+const opts=pages.map(([v,n])=>`<option value="${v}" ${v===p?'selected':''}>${n}</option>`).join('');
+const acts=activities.map((n,i)=>`<option value="${i}" ${i===t?'selected':''}>${n}</option>`).join('');
+const rows=students.map((s,i)=>`<tr><td>${i+1}</td><td>${esc(s.name)}</td><td>${esc(s.class_name)}</td><td>${live(s)?'<span class="live">● متصلة</span>':'<span class="away">○ غير نشطة</span>'}</td><td>${s.score} / 20</td><td>${s.completed||0}/4</td></tr>`).join('');
+const sidebarScroll=el('teacher-dash').scrollTop;el('teacher-dash').classList.toggle('collapsed',sidebarCollapsed);el('teacher-dash').innerHTML=`<div class="sidebar-head"><b>🎛️ لوحة المعلمة</b><button id="collapse-teacher">${sidebarCollapsed?'تكبير +':'تصغير −'}</button></div><div class="sidebar-content"><div class="sidebar-nav"><button class="btn o" id="teacher-prev">◀ السابق</button><button class="btn" id="teacher-next">التالي ▶</button></div><h1>إدارة حصة Alice 2</h1><div class="stats"><div class="stat">الطالبات المسجلات<strong>${students.length}</strong></div><div class="stat">المتصلات الآن<strong>${present}</strong></div><div class="stat">مجموع النقاط<strong>${students.reduce((a,s)=>a+s.score,0)}</strong></div></div>
+<div class="panel"><h2>التحكم بسير الحصة</h2><div class="controls"><label>الصفحة <select id="teacher-page">${opts}</select></label><label>النشاط <select id="teacher-activity">${acts}</select></label><button class="btn" id="send-page">إرسال إلى الطالبات</button><button class="btn o" id="toggle-open">${state.is_open?'إيقاف الحصة مؤقتًا':'بدء / استئناف الحصة'}</button><button class="btn o" id="show-leaders">🏆 ${teacherView==='leaders'?'إخفاء':'عرض'} الأوائل</button></div><p class="note">تختار المعلمة الصفحة والنشاط، وتعمل كل طالبة داخله بشكل مستقل. الدرجة من 20: نقطة لكل إجابة صحيحة في الأهداف، ونقطة لكل محاكاة، و8 نقاط لأسئلة الغلق الثلاثة.</p></div>
+<div class="panel"><h2>🎡 عجلة الطالبات المتصلات</h2><div class="wheelbox"><div class="wr"><div class="ptr"></div><div class="wheel" id="teacher-wheel"><canvas id="teacher-canvas" width="240" height="240"></canvas></div></div><div><button class="btn" id="spin-wheel" ${present?'':'disabled'}>أديري العجلة</button><h2 id="wheel-winner">${esc(selected)}</h2><small>العجلة تتحدث تلقائيًا من أسماء الطالبات المتصلات.</small></div></div></div>
+<div class="panel"><h2>الطالبات المسجلات ونتائجهن</h2><div class="controls"><button class="btn o" id="export-csv">تصدير CSV</button><button class="btn o" id="reset-session">إعادة ضبط الحصة والنتائج</button></div><div class="tablewrap"><table><thead><tr><th>#</th><th>الاسم</th><th>الشعبة</th><th>الاتصال</th><th>النقاط</th><th>أهداف مكتملة</th></tr></thead><tbody>${rows||'<tr><td colspan="6">بانتظار دخول الطالبات</td></tr>'}</tbody></table></div></div></div>`;
+el('collapse-teacher').onclick=()=>{sidebarCollapsed=!sidebarCollapsed;el('teacher-dash').classList.toggle('collapsed',sidebarCollapsed);el('collapse-teacher').textContent=sidebarCollapsed?'تكبير +':'تصغير −'};el('teacher-prev').onclick=()=>stepTeacher(-1);el('teacher-next').onclick=()=>stepTeacher(1);
+el('teacher-page').onchange=()=>{el('teacher-activity').disabled=!/^[0-3]$/.test(el('teacher-page').value)};
+el('teacher-activity').disabled=!/^[0-3]$/.test(p);
+el('send-page').onclick=()=>change({page:el('teacher-page').value,activity:/^[0-3]$/.test(el('teacher-page').value)?Number(el('teacher-activity').value):0,is_open:true});
+el('toggle-open').onclick=()=>change({is_open:!state.is_open});
+el('show-leaders').onclick=()=>toggleBoard();
+el('spin-wheel').onclick=spinWheel;el('export-csv').onclick=exportCSV;el('reset-session').onclick=async()=>{if(!confirm('سيتم حذف جميع سجلات الطالبات ونقاطهن وبدء حصة جديدة. هل أنتِ متأكدة؟'))return;try{await rpc('alice_teacher_reset',{p_token:token});selected='';toggleBoard(false,true);el('wheel-overlay').style.display='none';await refresh()}catch(e){alert(e.message)}};
+if(!wheelBusy)drawTeacherWheel();el('teacher-dash').scrollTop=sidebarScroll;}
+window.classroomTeacherNavigate=(page,activity)=>change({page:String(page),activity:Number(activity)||0,is_open:true});
+function stepTeacher(direction){const seq=[['intro',0],['obj',0],...Array.from({length:4},(_,i)=>[0,1,2,3].map(k=>[String(i),k])).flat(),['end',0]];const idx=seq.findIndex(([p,a])=>p===String(state.page)&&a===Number(state.activity));const next=seq[Math.max(0,Math.min(seq.length-1,idx+direction))];window.classroomTeacherNavigate(next[0],next[1])}
+async function change(obj){try{await rpc('alice_teacher_control',{p_token:token,p_page:obj.page??null,p_activity:obj.activity??null,p_open:obj.is_open??null});await refresh()}catch(e){alert('لم يتم تحديث الحصة: '+e.message)}}
+function drawTeacherWheel(){const c=el('teacher-canvas');if(!c)return;const ctx=c.getContext('2d'),arr=students.filter(live).map(s=>s.name),n=arr.length||1,r=120;ctx.clearRect(0,0,240,240);if(!arr.length){ctx.fillStyle='#eee';ctx.beginPath();ctx.arc(r,r,r-2,0,Math.PI*2);ctx.fill();ctx.fillStyle='#8a1538';ctx.font='bold 16px Tahoma';ctx.textAlign='center';ctx.fillText('بانتظار الطالبات',r,r);return}arr.forEach((name,i)=>{let a=2*Math.PI/n;ctx.beginPath();ctx.moveTo(r,r);ctx.arc(r,r,r-2,-Math.PI/2+i*a,-Math.PI/2+(i+1)*a);ctx.fillStyle=['#8A1538','#c9a227','#5b0e26','#d37c97','#a8284d','#7d6b3a'][i%6];ctx.fill();ctx.save();ctx.translate(r,r);ctx.rotate(-Math.PI/2+(i+.5)*a);ctx.fillStyle='#fff';ctx.font=`bold ${Math.max(8,Math.min(14,180/n+4))}px Tahoma`;ctx.textAlign='right';ctx.fillText(name.slice(0,17),r-10,4);ctx.restore()});el('teacher-wheel').style.transition='none';el('teacher-wheel').style.transform=`rotate(${spin%360}deg)`}
+async function publishDisplay(mode,winner=''){
+  if(role!=='teacher')return;
+  await rpc('alice_teacher_display',{p_token:token,p_mode:mode,p_winner:winner});
+  if(state){state.display_mode=mode;state.winner_name=winner;}
+}
+function syncDisplay(){
+  if(!state || (role!=='student'&&role!=='teacher'))return;
+  const mode=state.display_mode||'none';
+  if(role==='student'){
+    const board=el('leaderboard');
+    if(mode==='leaders'){
+      if(board.style.display!=='block')board.style.display='block';
+      renderBoard();
+    }else board.style.display='none';
+    const overlay=el('wheel-overlay');
+    if(mode==='winner' && state.winner_name){
+      el('winner-name').textContent=state.winner_name;
+      overlay.style.display='flex';
+    }else overlay.style.display='none';
+  }
+}
+function spinWheel(){
+  if(wheelBusy)return;
+  const a=students.filter(live);if(!a.length)return;
+  wheelBusy=true;
+  const k=Math.floor(Math.random()*a.length),n=a.length,chosen=a[k].name;
+  // Start from a stationary angle; the spin animation is applied exactly once.
+  const wheel=el('teacher-wheel');
+  const initial=((spin%360)+360)%360;
+  const target=(360-((k+.5)*360/n)+360)%360;
+  const delta=(target-initial+360)%360;
+  spin=initial+1800+delta;
+  if(wheel){wheel.style.transition='none';wheel.style.transform=`rotate(${initial}deg)`;void wheel.offsetWidth;wheel.style.transition='transform 4s cubic-bezier(.17,.67,.12,1)';wheel.style.transform=`rotate(${spin}deg)`;}
+  const button=el('spin-wheel');if(button)button.disabled=true;
+  setTimeout(async()=>{
+    spin=((spin%360)+360)%360;
+    if(wheel){wheel.style.transition='none';wheel.style.transform=`rotate(${spin}deg)`;}
+    selected='🎉 '+chosen;
+    el('winner-name').textContent=chosen;
+    const x=el('wheel-winner');if(x)x.textContent=selected;
+    try{
+      await publishDisplay('winner',chosen);
+      el('wheel-overlay').style.display='flex';
+    }catch(e){alert('تعذّر إرسال اسم الطالبة إلى الأجهزة: '+e.message)}
+    finally{wheelBusy=false;if(button)button.disabled=false;}
+  },4100);
+}
+async function toggleBoard(force,localOnly=false){
+  if(role!=='teacher')return;
+  const board=el('leaderboard');
+  const show=typeof force==='boolean'?force:board.style.display!=='block';
+  if(!localOnly){
+    try{await publishDisplay(show?'leaders':'none')}catch(e){alert('تعذّر مزامنة لوحة الأوائل: '+e.message);return}
+  }
+  board.style.display=show?'block':'none';if(show)renderBoard();
+  teacherView=show?'leaders':'control';
+}
+el('winner-close').onclick=async()=>{
+  if(role!=='teacher')return;
+  try{await publishDisplay('none');el('wheel-overlay').style.display='none'}
+  catch(e){alert('تعذّر إغلاق شاشة الاختيار لدى الطالبات: '+e.message)}
+};
+el('wheel-overlay').onclick=e=>{if(e.target===el('wheel-overlay')&&role==='teacher')el('winner-close').click()};
+function renderBoard(){const top=[...students].sort((a,b)=>b.score-a.score||new Date(a.joined_at)-new Date(b.joined_at));el('leaderboard').innerHTML=`<button class="board-close" id="close-board">✕ إغلاق</button><h1>🏆 لوحة أوائل سباق السيارات</h1><p>الترتيب حسب النقاط، وعند التعادل حسب أسبقية الدخول.</p><div class="podium">${[1,0,2].map((i)=>`<div><div style="font-size:38px">${['🥇','🥈','🥉'][i]}</div><strong>${esc(top[i]?.name||'—')}</strong><b>${top[i]?.score??0} / 20 نقطة</b></div>`).join('')}</div><div class="panel" style="margin-top:20px"><table><tr><th>الترتيب</th><th>الطالبة</th><th>الشعبة</th><th>النقاط</th></tr>${top.map((s,i)=>`<tr><td>${i+1}</td><td>${esc(s.name)}</td><td>${esc(s.class_name)}</td><td>${s.score} / 20</td></tr>`).join('')}</table></div>`;el('close-board').style.display=role==='teacher'?'block':'none';el('close-board').onclick=()=>{if(role==='teacher')toggleBoard(false)}}
+function exportCSV(){const rows=[['الاسم','الشعبة','النقاط','الأهداف المكتملة','حالة الاتصال'],...students.map(s=>[s.name,s.class_name,s.score,s.completed||0,live(s)?'متصلة':'غير نشطة'])];const csv='\ufeff'+rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='alice-results.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+window.classroomClosureAnswer=async(q,choice)=>{if(role!=='student'||!state?.is_open||String(state.page)!=='end')throw Error('الغلق غير مفتوح');await rpc('alice_closure_answer',{p_token:token,p_question:q,p_choice:choice});await refresh()};
+ window.classroomAnswer=async(g,q,choice)=>{if(role!=='student'||!state?.is_open||String(state.page)!==String(g)||tab!==2)return;try{await rpc('alice_answer',{p_token:token,p_goal:g,p_question:q,p_choice:choice});await refresh()}catch(e){console.warn(e.message)}};
+window.classroomFinishGoal=async(g)=>{if(role!=='student'||!state?.is_open)return;try{await rpc('alice_complete_goal',{p_token:token,p_goal:g});goalCompleted.add(g);done[g]=1;const b=el('fw');if(b){b.textContent='✓ تم تسجيل إنجاز الهدف';b.disabled=true}await refresh()}catch(e){alert('تعذّر تسجيل الإنجاز: '+e.message)}};
+window.classroomSimDone=async()=>{if(role!=='student'||!state?.is_open||!/^\d$/.test(String(state.page))||tab!==1)return;try{await rpc('alice_simulation',{p_token:token,p_goal:Number(state.page)});await refresh()}catch(e){console.warn(e.message)}};
+})();
+
+</script></body></html>
